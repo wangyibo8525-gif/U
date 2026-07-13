@@ -1,0 +1,61 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Noto Sans Thai',sans-serif}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap');
+
+body{
+  background: linear-gradient(180deg, #002B7A 0%, #FFFFFF 45%, #A51919 100%);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.main-box{
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  background: rgba(255,255,255,0.98);
+  border: 7px solid #D4AF37;
+  box-shadow: 0 0 0 4px #A51919, 0 20px 60px rgba(0,0,0,0.25);
+  border-radius: 16px;
+  padding: 2.5rem 1.8rem 2rem;
+  overflow: visible;
+}
+
+.naga{
+  position: absolute;
+  top: -35px;
+  width: 140px;
+  height: 110px;
+  z-index: 10;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,0.2));
+}
+.naga-left{left: -20px;}
+.naga-right{right: -20px; transform: scaleX(-1);}
+.naga svg{width:100%;height:100%;fill:#D4AF37;stroke:#002B7A;stroke-width:1.2;}
+
+.header{text-align:center;margin-bottom:1.5rem;padding-top:1rem}
+.header h1{font-size:2.1rem;color:#002B7A;font-weight:700;text-shadow:1px 1px 3px rgba(165,25,25,0.15)}
+.header p{color:#A51919;font-size:1.15rem;font-weight:600;margin-top:.4rem}
+
+.status-bar{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:1.2rem;font-size:1.2rem;font-weight:600;color:#A51919}
+
+#gameCanvas{display:block;margin:0 auto;border:5px solid #D4AF37;border-radius:12px;background:#FFF9E8;box-shadow:inset 0 0 20px rgba(212,175,55,0.25);max-width:100%;height:auto}
+
+.controls{margin:1.8rem auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;max-width:340px}
+.btn{padding:1.1rem;border:3px solid #D4AF37;background:linear-gradient(145deg,#FFFBEF,#FFEEB8);color:#002B7A;border-radius:14px;font-size:1.4rem;font-weight:700;cursor:pointer;transition:all .2s ease;box-shadow:0 5px 10px rgba(0,0,0,0.1)}
+.btn:active{transform:scale(.94);box-shadow:inset 0 3px 7px rgba(0,0,0,0.15)}
+.btn-up{grid-column:2;grid-row:1}
+.btn-left{grid-column:1;grid-row:2}
+.btn-right{grid-column:3;grid-row:2}
+.btn-down{grid-column:2;grid-row:2}
+.btn-action{grid-column:2;grid-row:3;background:linear-gradient(145deg,#FFE4C0,#FFD194);border-color:#A51919;color:#A51919}
+
+.tip{margin-top:1.6rem;text-align:center;font-size:1rem;color:#002B7A;font-weight:500;line-height:1.6}
+
+@media(max-width:580px){
+  .main-box{padding:2.2rem 1.2rem 1.8rem}
+  .naga{width:110px;height:90px;top:-28px}
+  .naga-left{left:-12px}
+  .naga-right{right:-12px}
+  .header h1{font-size:1.7rem}
+  .status-bar{gap:1.2rem;font-size:1.05rem}
+}
