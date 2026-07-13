@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>หุ่นยนต์กับเขาวงกตปริศนา - ผลงานออโต้</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- เสียง -->
+<audio id="sndHit" preload="auto">
+  <source src="https://assets.mixkit.co/sfx/preview/mixkit-quick-punch-impact-2052.mp3" type="audio/mpeg">
+
+<audio id="sndWin" preload="auto">
+  <source src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3" type="audio/mpeg">
+
+<audio id="sndHurt" preload="auto">
+  <source src="https://assets.mixkit.co/sfx/preview/mixkit-player-falling-or-hurt-2057.mp3" type="audio/mpeg">
+
+
+<div class="main-box">
+  <!-- พญานาคมุมซ้ายบน -->
+  <div class="naga naga-left">
+    <svg viewBox="0 0 120 90">
+      <path d="M10,80 Q20,50 5,30 Q0,15 20,10 Q40,5 55,15 Q70,25 65,40 Q60,55 75,60 Q90,65 100,50 L110,55 Q95,75 70,70 Q45,65 30,75 Q15,85 10,80 Z"/>
+      <path d="M55,15 L60,5 L65,15 M50,20 L40,5 M60,25 L75,15" stroke-width="1"/>
+      <circle cx="22" cy="18" r="2"/>
+    </svg>
+  </div>
+
+  <!-- พญานาคมุมขวาบน -->
+  <div class="naga naga-right">
+    <svg viewBox="0 0 120 90">
+      <path d="M10,80 Q20,50 5,30 Q0,15 20,10 Q40,5 55,15 Q70,25 65,40 Q60,55 75,60 Q90,65 100,50 L110,55 Q95,75 70,70 Q45,65 30,75 Q15,85 10,80 Z"/>
+      <path d="M55,15 L60,5 L65,15 M50,20 L40,5 M60,25 L75,15" stroke-width="1"/>
+      <circle cx="22" cy="18" r="2"/>
+    </svg>
+  </div>
+
+  <div class="header">
+    <h1>🤖 หุ่นยนต์กับเขาวงกตปริศนา</h1>
+    <p>ผลงานการออกแบบของ ออโต้</p>
+  </div>
+
+  <div class="status-bar">
+    <div id="lives">❤️❤️❤️</div>
+    <div id="state">ทางเดินโล่ง</div>
+  </div>
+
+  <canvas id="gameCanvas" width="640" height="480"></canvas>
+
+  <div class="controls">
+    <button class="btn btn-up" onclick="move('up')">⬆️</button>
+    <button class="btn btn-left" onclick="move('left')">⬅️</button>
+    <button class="btn btn-right" onclick="move('right')">➡️</button>
+    <button class="btn btn-down" onclick="move('down')">⬇️</button>
+    <button class="btn btn-action" onclick="punch()">👊 ต่อย</button>
+  </div>
+
+  <div class="tip">💡 เคล็ดลับ: กดต่อยเมื่อพร้อม! เขาวงกตจะปรากฏขึ้นทันที</div>
+</div>
+
+<!-- โหลดไฟล์สคริปต์ตามลำดับสำคัญ -->
+<script src="map.js"></script>
+<script src="sound.js"></script>
+<script src="ui.js"></script>
+<script src="controls.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
